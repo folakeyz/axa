@@ -1,0 +1,200 @@
+.axaMansardSharepoint {
+	width: 100%;
+	height: 30rem;
+}
+.axaaxaMansardSharepoint {
+	img {
+		min-height: 30rem;
+	}
+}
+.alertBtns {
+	width: 15%;
+	height: 3rem;
+	background: darkblue;
+	float: left;
+	color: white;
+	h3 {
+		text-align: center;
+	}
+}
+.alertMarquee {
+	width: 85%;
+	height: 1.8rem;
+	background: pink;
+	float: left;
+	color: white;
+	padding-top: 20px;
+}
+.axaMansardLeft {
+	width: 70%;
+	height: 100%;
+    float: left;
+}
+.axaMansardRight {
+	width: 30%;
+	height: 100%;
+    float: left;
+    
+}
+.timer{
+    width: 100%;
+    height: 4rem;
+    background: teal;
+}
+.timerText{
+    width: 30%;
+    height: 4rem;
+    background:#00ADC6;
+    color: white;
+    float: left;
+}
+.timerText p{
+    font-size: 10px;
+}
+.timerValue{
+    width: 70%;
+    height: 4rem;
+    background:#027280;
+    color: white;
+    float: left;
+    font-size: 1.5rem;
+}
+.alert{
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: darkblue;
+}
+
+.alertNews{
+    width: 100%;
+    color: black;
+}
+.alertNews h6{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.alertNews p{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.alertNews small{
+    font-size: 7px;
+    margin-bottom: 0;
+}
+
+.eachSlide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+  .eachSlide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+
+  .links{
+    width: 100%;
+    color: darkblue;
+}
+.links a{
+    width: 16%;
+   height: 3rem;
+    background: darkblue;
+    color: white;
+    float: left;
+    margin:3px;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 3px;
+}
+.avatar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.avatarName{
+    width: 65%;
+    height: 5rem;
+    float: left;
+}
+.avatarName h5{
+   margin-bottom: 0;
+   font-weight: bold;
+    }
+.avatarName small{
+font-size: 8px;
+}
+.cardOutline{
+    width: 90%;
+    height: 5rem;
+    border: 1px solid rgb(7, 125, 194);
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 3%;
+    margin-bottom: 15px;
+}
+.ratings{
+    width: 30%;
+    height: 4rem;
+    float:left;
+    margin: 3px;
+}
+.ratingsOutline{
+    width: 30%;
+    height: 4rem;
+    float:left;
+    margin: 3px;
+    border-right: 1px solid  rgb(7, 125, 194);
+}
+.ratings small{
+    margin-bottom: 0;
+}
+
+.docCard{
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(90deg, rgba(0,26,149,1), rgba(0,125,183,1));
+    color: white;
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.docCardLeft{
+    width: 20%;
+    float: left;
+}
+.docCardRight{
+    width: 80%;
+    float: left;
+}
+.docCardRight h3{
+    margin-bottom: 0;
+}
+.docCardRight p{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.spolights{
+    width: 100%;
+    height: 15rem;
+}
+.spolight{
+    width: 50%;
+    height: 15rem;
+    background: #FCD384;
+}
