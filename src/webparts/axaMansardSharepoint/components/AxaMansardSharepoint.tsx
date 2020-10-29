@@ -1,23 +1,32 @@
 import * as React from 'react';
-import styles from './axa.module.scss';
+import style from './test.module.scss';
 import { IAxaMansardSharepointProps } from './IAxaMansardSharepointProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import DemoCarousel from './Carousel/Carousels';
+import DemoCarousel from './Carousel/Carousel';
 import FooComponent from './Marquee/Marquee';
 import MediaCard from './ImgCard/MediaCard';
 import Timer from './CountDown/CountDown';
 import Alerts from './Alerts/Alert';
-import Slideshow from './Slider/Slider';
+import Gallery from './Slider/Slider';
 import Links from './Quicklinks/Quicklinks';
-import Birthday from './Birthday/Birthday';
+import Birthdays from './Birthday/Birthdays';
 import Rating from './Rating/Rating';
 import Document from './Documents/Documents';
+import App from './Polls/Poll';
 import { IWebPartContext } from '@microsoft/sp-webpart-base';
 import { SPHttpClient } from '@microsoft/sp-http';
+import * as jQuery from "jquery";
+import Instagram from './Instagram/Instagram';
+import Twitter from './Yammer/Yammer';
+import SimpleSlider from './Spotlight/Spolights';
+import styles from './axa.module.scss';
+import mstyle from './styles.module.scss';
+
+
 
 export default class AxaMansardSharepoint extends React.Component<IAxaMansardSharepointProps, {}> {
   public render(): React.ReactElement<IAxaMansardSharepointProps> {
-
+    jQuery("#workbenchPageContent").prop("style", "max-width: none"); jQuery(".SPCanvas-canvas").prop("style", "max-width: none"); jQuery(".CanvasZone").prop("style", "max-width: none");
     return (
       // Parent Container
       <div className={ styles.axaMansardSharepoint }>
@@ -30,75 +39,72 @@ export default class AxaMansardSharepoint extends React.Component<IAxaMansardSha
               <FooComponent />
               {/* End of News */}
               {/* NEws Card */}
-              <MediaCard  
-              title="Tips and Tricks on Buying a Car" 
-              intro="Buying a car can be a scary thought. Most times, a car..."
-              date="23 AUGUST, 2019"
-              image="https://www.axamansard.com/lifeandliving/Images/Lead/Tips_On_Buying_A_Car_buying-a-car.jpg"/>
-              <MediaCard
-              title="AXA Partners with Liverpool Football Club " 
-              intro="AXA reignites its sponsorship strategy and is proud to join forces......."
-              date="12 OCTOBER, 2019"
-              image="https://www.axamansard.com/lifeandliving/Images/Lead/AXA_becomes_Official_Global_Insurance_Partner_of_Liverpool_Football_Club_axa%20lfc%20feature.jpg"
-              />
-              <MediaCard
-              title="working remotely can be fun, Here are the steps to follow " 
-              intro="In the last couple of weeks, we've been celebrated across..."
-              date="13 OCTOBER, 2019"
-              image="https://www.axamansard.com/images/banners/EduPlan-Plus-Website-Banner.jpg"
-              />
+              <div className={styles.card}>
+                  <div className={styles.timeline}>
+                    <h3> IMPORTANT NEWS</h3>
+                    <a>View All NEWS UPDATE</a>
+                   </div>
+                  <MediaCard  />
+              </div>
+    
               {/* End of News Card */}
-
               {/* List News */}
+              <div className={styles.card}>
               <div className={styles.alert}>
-                <h5> IMPORTANT NEWS</h5>
+                    <div className={styles.timeline}>
+                        <h3>IMPORTANT NOTICE</h3>
+                        <a>View All</a>
+                     </div>
+                     <Alerts />
+                
+              </div>
+              {/* Slider */}
+              <div className={style.eventsCenter}>
+                    <div className={styles.timeline}>
+                        <h3> EVENTS</h3>
+                        <a>View All</a>
+                    </div>
+                      <Gallery /> 
+                </div>
+                {/* End of Slider */}
+                </div>
+                <div className={styles.alert}>
+                <div className={styles.timeline}>
+                <h3> GIST LOUNGE</h3>
                 <a>View All</a>
-                <Alerts
-                title="AXA Group Phising awareness Program"
-                news="In the couple of Weeks, We have been ......"
-                date="12TH OCTOBER 2019"
-                />
-                  <Alerts
-                title="ISO Training for June 2020"
-                news="In the couple of Weeks, We have been ......"
-                date="12TH OCTOBER 2019"
-                />
-                  <Alerts
-                title="AXA Group Security Test Program"
-                news="In the couple of Weeks, We have been ......"
-                date="12TH OCTOBER 2019"
-                />
+              </div>
+                    <Twitter />
               </div>
               {/* Slider */}
               <div className={styles.alert}>
-                {/* <Slideshow /> */}
+                <h3>NEW STAFF/FEATURED STAFF</h3>
+                <SimpleSlider /> 
                 </div>
                 {/* End of Slider */}
-             
+                <div className={mstyle.instagram}>
+                <h3>INSTAGRAM FEEDS</h3>
+               <Instagram /> 
+                </div>
+
+                <div className={styles.alert}>
+              <App />
+              </div>
             </div> 
+            
+         
           {/* Right Column */}
             <div className={ styles.axaMansardRight}>
-              {/* Countdown */}
-                <Timer />
-                {/* End of Countdown */}
+                    {/* Countdown */}
+                    <Timer />
+                    {/* End of Countdown */}
                 {/* Quick Links */}
+                
                 <Links />
                 {/* End of QuickLinks */}
                 {/* Birthday Webpart */}
-                <div  className={styles.links}>
+                <div  className={styles.birthday}>
                 <h4>Staff Celebration</h4>
-                <Birthday 
-                image="https://www.axamansard.com/lifeandliving/Images/Lead/AXA_becomes_Official_Global_Insurance_Partner_of_Liverpool_Football_Club_axa%20lfc%20feature.jpg" 
-                staff="Idris Edem" 
-                celebration="Birthday Celebration "/>
-                <Birthday 
-                image="https://www.axamansard.com/lifeandliving/Images/Lead/AXA_becomes_Official_Global_Insurance_Partner_of_Liverpool_Football_Club_axa%20lfc%20feature.jpg" 
-                staff="Safiyyah Siyanbade" 
-                celebration="5yrs Work Anniversary "/>
-                <Birthday 
-                image="https://www.axamansard.com/lifeandliving/Images/Lead/AXA_becomes_Official_Global_Insurance_Partner_of_Liverpool_Football_Club_axa%20lfc%20feature.jpg" 
-                staff="Eniola Balogun" 
-                celebration="5yrs Work Anniversary "/>
+                <Birthdays />
                 </div>
                 {/* End of Birthday Webpart */}
                 {/* Customer Rating */}

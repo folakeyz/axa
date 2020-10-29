@@ -3,7 +3,7 @@ import style from '../axa.module.scss';
 
 const Birthday = (props) => {
     return(
-        <div>
+        <div className={style.avatars}>
         <div  className={style.avatar}>
         <img src={props.image} />
         </div>

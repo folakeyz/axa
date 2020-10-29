@@ -1,3 +1,10 @@
+@import "./node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
 .axaMansardSharepoint {
 	width: 100%;
 	height: 30rem;
@@ -13,25 +20,29 @@
 	background: darkblue;
 	float: left;
 	color: white;
-	h3 {
-		text-align: center;
-	}
+    i{
+        float:left;
+        margin-right: 10px;
+        
+    }
 }
 .alertMarquee {
 	width: 85%;
-	height: 1.8rem;
+	height: 3rem;
 	background: pink;
 	float: left;
 	color: white;
-	padding-top: 20px;
+    padding-top: 20px;
+
 }
 .axaMansardLeft {
-	width: 70%;
+	width: 68%;
 	height: 100%;
     float: left;
+    margin-right: 3%;
 }
 .axaMansardRight {
-	width: 30%;
+	width: 29%;
 	height: 100%;
     float: left;
     
@@ -47,6 +58,7 @@
     background:#00ADC6;
     color: white;
     float: left;
+    padding: 0.3rem;
 }
 .timerText p{
     font-size: 10px;
@@ -58,6 +70,7 @@
     color: white;
     float: left;
     font-size: 1.5rem;
+    padding:1rem;
 }
 .alert{
     width: 50%;
@@ -66,13 +79,43 @@
     color: darkblue;
 }
 
+.timeline{
+    width: 100%;
+    height: 5rem;
+    color: darkblue;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.timeline h3{
+    color: darkblue;
+    float: left;
+    margin-top: 0;
+    font-size: 18px;
+    }
+.timeline a{
+    color: darkblue;
+    text-decoration: underline;
+    float: right;
+    text-transform: uppercase;
+}
+.alert img{
+    max-height: 20rem;
+}
 .alertNews{
     width: 100%;
     color: black;
 }
 .alertNews h6{
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.alertNews h3{
     font-size: 15px;
     margin-bottom: 0;
+}
+.alertNews a{
+    text-decoration: none;
+    color: black;
 }
 .alertNews p{
     font-size: 10px;
@@ -101,43 +144,62 @@
   .links{
     width: 100%;
     color: darkblue;
+    height: 100%;
+    display: block;
+    overflow: auto;
 }
 .links a{
-    width: 16%;
-   height: 3rem;
+    width: 30%;
+   height: 5.5rem;
     background: darkblue;
-    color: white;
     float: left;
-    margin:3px;
+    margin:1.5%;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 13px;
     padding: 1rem;
+    padding-top: 2rem;
     text-align: center;
     align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.birthday{
+    width: 100%;
+    height: 18rem;
+}
+.avatars{
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 10px;
 }
 .avatar{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     float: left;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 .avatar img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-right: 2%;
 }
 .avatarName{
     width: 65%;
     height: 5rem;
     float: left;
+    padding: 0;
 }
 .avatarName h5{
+margin-top: 3px;
    margin-bottom: 0;
    font-weight: bold;
+   font-size: 13px;
     }
 .avatarName small{
-font-size: 8px;
+font-size: 10px;
+color: crimson;
 }
 .cardOutline{
     width: 90%;
@@ -183,6 +245,7 @@ font-size: 8px;
     float: left;
 }
 .docCardRight h3{
+    font-size: 18px;
     margin-bottom: 0;
 }
 .docCardRight p{
@@ -198,3 +261,20 @@ font-size: 8px;
     height: 15rem;
     background: #FCD384;
 }
+
+.root{
+    max-width: 30%;
+    margin:1%;
+    height: 18rem;
+   float: left;
+
+  }
+  .media{
+    height: 100px;
+  }
+  .card{
+      width: 100%;
+      height: 25rem;
+      
+  }
+

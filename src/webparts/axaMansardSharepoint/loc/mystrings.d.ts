@@ -8,3 +8,4 @@ declare module 'AxaMansardSharepointWebPartStrings' {
   const strings: IAxaMansardSharepointWebPartStrings;
   export = strings;
 }
+

@@ -1,0 +1,232 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+// .customerSatisfactionRating {
+//   .container {
+//     max-width: 700px;
+//     margin: 0px auto;
+//     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+//   }
+
+//   .row {
+//     @include ms-Grid-row;
+//     @include ms-fontColor-white;
+//     background-color: $ms-color-themeDark;
+//     padding: 20px;
+//   }
+
+//   .column {
+//     @include ms-Grid-col;
+//     @include ms-lg10;
+//     @include ms-xl8;
+//     @include ms-xlPush2;
+//     @include ms-lgPush1;
+//   }
+
+//   .title {
+//     @include ms-font-xl;
+//     @include ms-fontColor-white;
+//   }
+
+//   .subTitle {
+//     @include ms-font-l;
+//     @include ms-fontColor-white;
+//   }
+
+//   .description {
+//     @include ms-font-l;
+//     @include ms-fontColor-white;
+//   }
+
+//   .button {
+//     // Our button
+//     text-decoration: none;
+//     height: 32px;
+
+//     // Primary Button
+//     min-width: 80px;
+//     background-color: $ms-color-themePrimary;
+//     border-color: $ms-color-themePrimary;
+//     color: $ms-color-white;
+
+//     // Basic Button
+//     outline: transparent;
+//     position: relative;
+//     font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     font-size: $ms-font-size-m;
+//     font-weight: $ms-font-weight-regular;
+//     border-width: 0;
+//     text-align: center;
+//     cursor: pointer;
+//     display: inline-block;
+//     padding: 0 16px;
+
+//     .label {
+//       font-weight: $ms-font-weight-semibold;
+//       font-size: $ms-font-size-m;
+//       height: 32px;
+//       line-height: 32px;
+//       margin: 0 4px;
+//       vertical-align: top;
+//       display: inline-block;
+//     }
+//   }
+// }
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 10px;
+$myWidth: 700px;
+$myborder: 2px solid #7ed8e4;
+$myborderradius: 2%;
+$myheight: 80px;
+
+.customerSatisfactionRating { 
+  background: rgba(0,0,0,0);
+  .container {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  max-width: $myWidth;
+  margin: 0px auto;
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+  border: $myborder;
+  border-radius: $myborderradius;
+  height: $myheight;
+  margin-bottom: 10px;
+  
+  }
+
+   .row {
+    @include ms-Grid-row;
+    //@include ms-fontColor-white;
+    // background-color: $ms-color-themeDark; //white;
+    //padding-bottom: 2px;
+    color: #808080;
+    height: $myheight;
+  }
+
+
+  .containeri {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    max-width: $myWidth;
+    margin: 0px auto;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+    border: $myborder;
+    border-radius: $myborderradius;
+    height: 100px;
+    //margin-top: 25px;
+    }
+  
+     .rowi {
+      //@include ms-Grid-row;
+      //@include ms-fontColor-white;
+      // background-color: $ms-color-themeDark; //white;
+      //padding-bottom: 20px;
+      color: #808080;
+      //height: $myheight;
+      display: inline-block;
+      //margin-top: 25px;
+      //margin-bottom: 30px;
+    }
+
+
+    .column {
+     @include ms-Grid-col;
+     @include ms-lg4;
+    // @include ms-xl8;
+     //@include ms-xlPush2;
+     //@include ms-lgPush1;
+     //margin-top:  20px;
+  }
+
+  .columniii, .columniv  {
+    @include ms-Grid-col;
+    @include ms-lg4;
+   // @include ms-xl8;
+    //@include ms-xlPush2;
+    //@include ms-lgPush1;
+    //margin-top:  20px;
+    border-right:  1px dashed $myborder;
+ }
+
+
+  .columni {
+    @include ms-Grid-col;
+    @include ms-lg8;
+   // @include ms-xl8;
+    //@include ms-xlPush2;
+    //@include ms-lgPush1;
+    //margin-top:  20px;
+ }
+
+ .columnii {
+  @include ms-Grid-col;
+  @include ms-lg4;
+ // @include ms-xl8;
+  //@include ms-xlPush2;
+  //@include ms-lgPush1;
+  //margin-top:  17px;
+}
+
+
+ 
+  label{
+    font-weight: 1200;
+    font-size: 14px;
+  }
+    .title {
+    @include ms-font-l;
+    //@include ms-fontColor-white;
+    display: list-item;
+    list-style: none;
+    font-weight: 1500;
+    font-size: 25px;
+  }
+
+   .cstmrcnt{
+    font-weight: 1500;
+    font-size: 60px;
+    
+  }
+  
+  .crtag{
+    display: inline-flexbox;//list-item;
+    list-style: none;
+    font-size: 13px;
+    padding: auto auto auto 50px;
+    font-weight: bold;
+  }
+
+  .subTitle {
+    @include ms-font-xl;
+    //@include ms-fontColor-white;
+    // color: #00005b;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #808080;
+    //font-weight: 1500;
+    // font-size: 20px;
+    
+    
+  }
+
+ 
+  .sdate{
+    font-weight: 1500;
+    font-size: 12px;
+    color: #808080;
+  }
+
+
+  .label{
+   // margin-top: 50px;
+    font-weight: bold;
+  }
+
+
+
+
+}
+

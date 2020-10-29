@@ -20,8 +20,8 @@ return(
 </div>
 </div>
 <div  className={style.cardOutline}>
-    <h1><b>382%</b></h1>
-    <h5>New Customer Count</h5>
+    <h1 className="float-left"><b>382</b></h1>
+    <p  className="float-left">New Customer Count</p>
 </div>
 </div>
 );

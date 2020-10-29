@@ -5,18 +5,18 @@ const Links = () => {
     return(
     <div  className={style.links}>
         <h4>Quick Links</h4>
-        <a>Process Maker</a>
-        <a>Fintrak</a>
-        <a>Unitrak</a>
-        <a>HR Workplace</a>
-        <a>AIMS Web</a>
-        <a>AIMS Friendly</a>
-        <a>Workbench</a>
-        <a>Dynamics CRM</a>
-        <a>Liquidation Workflow</a>
-        <a>IT Service Desk</a>
-        <a>Claims Workflow</a>
-        <a>Calculator</a>
+        <a href="#">Process Maker</a>
+        <a href="#">Fintrak</a>
+        <a href="#">Unitrak</a>
+        <a href="#">HR Workplace</a>
+        <a href="#">AIMS Web</a>
+        <a href="#">AIMS Friendly</a>
+        <a href="#">Workbench</a>
+        <a href="#">Dynamics CRM</a>
+        <a href="#">Liquidation Workflow</a>
+        <a href="#">IT Service Desk</a>
+        <a href="#">Claims Workflow</a>
+        <a  href="#">Calculator</a>
     </div>
     );
     }

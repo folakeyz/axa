@@ -8,68 +8,95 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-const useStyles = makeStyles({
-  root: {
-    maxWidth: "30%",
-    float:"left",
-    margin:"1%",
-  },
-  media: {
-    height: 100,
-  },
- 
-});
+import pnp from 'sp-pnp-js';
+import { IMediaItemReactProps } from './IMediaItemReactProps';
+import { ClassMedia } from './ClassMedia';
+import { IMedia } from './IMedia';
+import style from '../axa.module.scss';
 
-const theme = createMuiTheme({
-  typography: {
-    subtitle1: {
-      fontSize: 9,
-    },
-    body1: {
-      fontSize: 7,
-    },
+
+
+export default class MediaCard extends React.Component<IMediaItemReactProps, any> {
+  public constructor(props:IMediaItemReactProps,any)
+  {
+  super(props);
+  this.state={
+      items:[]
   }
-});
+  }
 
-export default function MediaCard(props) {
-  const classes = useStyles();
+  render() {
 
-  return (
-      
-   
-     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.image}
-          title="Axa Mansard News"
-        />
-        <CardContent>
-        <ThemeProvider theme={theme}>
-          <Typography variant="subtitle1">
-          {props.title}
-          </Typography>
+    
+    const theme = createMuiTheme({
+      typography: {
+        subtitle1: {
+          fontSize: 9,
+        },
+        body1: {
+          fontSize: 7,
+        },
+      }
+    });
+
+
+    return (
+      <>
+      {
+      this.state.items.map(function(item:IMedia){
+          return(
+            <Card className={style.root}>
+            <CardActionArea>
+              <CardMedia className={style.media} image={item.Image} title="Axa Mansard News"/>
+              <CardContent>
+              <ThemeProvider theme={theme}>
+                <Typography variant="subtitle1">
+                {item.Title}
+                </Typography>
+                
+                <Typography variant="body1" color="textSecondary" component="p">
+                {item.Content}
+                </Typography>
+                <Typography variant="body1" color="textSecondary" component="small">
+                {item.Date}
+                </Typography>
+                </ThemeProvider>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <a href={item.Url}>
+                Learn More
+              </a>
+            </CardActions>
           
-          <Typography variant="body1" color="textSecondary" component="p">
-          {props.intro}
-          </Typography>
-          <Typography variant="body1" color="textSecondary" component="small">
-          {props.date}
-          </Typography>
-          </ThemeProvider>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    
-  </Card>
- 
+        </Card>
+          )
+      })
+  }
+      
+      
+       </>
 
+    )
     
-    
-    
-  );
+  }
+
+  public componentDidMount()
+    {
+        // debugger;
+        this._MediaList();
+    }
+    private _MediaList():void
+    {
+        pnp.sp.web.lists.getByTitle(`News`).items.get().then
+        ((response)=>{
+            let MediaCollection=response.map(item=> new ClassMedia(item)).reverse();
+            let MediaCard = MediaCollection.slice(0, 3)
+            this.setState({items:MediaCard});
+        }
+
+        )
+    }
+
 }
+
